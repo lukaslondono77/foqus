@@ -25,6 +25,9 @@ export default defineConfig({
         categories: ['fitness', 'health', 'lifestyle'],
         lang: 'es',
         prefer_related_applications: false,
+        edge_side_panel: {
+          preferred_width: 400
+        },
         icons: [
           {
             src: '/icon-192x192.png',
