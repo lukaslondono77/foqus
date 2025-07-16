@@ -2,24 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Mobile app-like styles */
+/* Reset and base styles for native app feel */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overscroll-behavior: none;
-  -webkit-overflow-scrolling: touch;
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 #root {
@@ -27,25 +33,22 @@ body {
   width: 100vw;
   min-height: 100vh;
   min-width: 100vw;
+  overflow-x: hidden;
 }
 
-/* Hide scrollbars on mobile for cleaner look */
-@media (max-width: 768px) {
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  
-  * {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+/* Hide scrollbars everywhere for cleaner look */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Prevent zoom on input focus */
-@media (max-width: 768px) {
-  input, textarea, select {
-    font-size: 16px !important;
-  }
+input, textarea, select {
+  font-size: 16px !important;
 }
 
 /* Safe area for notched devices */
@@ -58,62 +61,128 @@ body {
   }
 }
 
-/* Mobile app full-screen styles */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    line-height: 1.5;
+/* Mobile-first app styles - applied to all screen sizes */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Navigation styling for app feel */
+nav {
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+  padding-top: max(0.5rem, env(safe-area-inset-top));
+  background: #1e293b !important;
+  border-bottom: 1px solid #334155;
+}
+
+/* Full width containers */
+.max-w-7xl, .max-w-6xl, .max-w-4xl {
+  max-width: 100% !important;
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Touch targets - minimum 44px for accessibility */
+button, a, [role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Typography for mobile */
+h1 { 
+  font-size: 2.5rem !important; 
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+h2 { 
+  font-size: 2rem !important; 
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+}
+h3 { 
+  font-size: 1.5rem !important; 
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+}
+p {
+  font-size: 1.125rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Button styling */
+.px-8 { 
+  padding-left: 2rem !important; 
+  padding-right: 2rem !important; 
+}
+.py-4 { 
+  padding-top: 1.25rem !important; 
+  padding-bottom: 1.25rem !important; 
+}
+
+/* Full width elements */
+.w-full { width: 100% !important; }
+
+/* Grid layout - single column for mobile */
+.grid { 
+  grid-template-columns: 1fr !important; 
+  gap: 1.5rem !important;
+}
+
+/* Section spacing */
+section {
+  padding: 2rem max(1rem, env(safe-area-inset-left)) 2rem max(1rem, env(safe-area-inset-right));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Card styling */
+.bg-slate-50 {
+  background: #f8fafc !important;
+  border-radius: 1rem !important;
+  padding: 2rem !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero section improvements */
+.h-screen {
+  height: 100vh !important;
+  min-height: 100vh !important;
+  padding-top: max(4rem, env(safe-area-inset-top));
+  padding-bottom: max(2rem, env(safe-area-inset-bottom));
+}
+
+/* Text centering and spacing */
+.text-center {
+  text-align: center !important;
+}
+
+.space-x-8 > * + * {
+  margin-left: 2rem !important;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr) !important;
   }
   
-  /* Make navigation more mobile-friendly */
-  nav {
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-  }
-  
-  /* Ensure content takes full width */
   .max-w-7xl, .max-w-6xl, .max-w-4xl {
-    max-width: 100% !important;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    max-width: 80rem !important;
+    margin: 0 auto !important;
   }
-  
-  /* Make images and content larger on mobile */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Increase touch targets */
-  button, a {
-    min-height: 44px;
-    min-width: 44px;
-  }
-  
-  /* Better mobile spacing */
-  .space-x-8 > * + * {
-    margin-left: 1rem;
-  }
-  
-  /* Full height sections */
-  section, div[class*="min-h-"] {
-    min-height: 100vh;
-  }
-  
-  /* Larger text on mobile */
-  h1 { font-size: 2rem !important; }
-  h2 { font-size: 1.75rem !important; }
-  h3 { font-size: 1.5rem !important; }
-  
-  /* Better button sizing */
-  .px-8 { padding-left: 2rem !important; padding-right: 2rem !important; }
-  .py-4 { padding-top: 1rem !important; padding-bottom: 1rem !important; }
-  
-  /* Full width on mobile */
-  .w-full { width: 100% !important; }
-  
-  /* Better grid layout */
-  .grid { grid-template-columns: 1fr !important; }
 }
 
 /* PWA standalone mode styles */
@@ -124,5 +193,31 @@ body {
   
   nav {
     padding-top: env(safe-area-inset-top);
+  }
+  
+  /* Hide browser UI elements in standalone mode */
+  .standalone-only {
+    display: block !important;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+  h1 { font-size: 2rem !important; }
+  h2 { font-size: 1.75rem !important; }
+  h3 { font-size: 1.25rem !important; }
+  
+  .px-8 { 
+    padding-left: 1.5rem !important; 
+    padding-right: 1.5rem !important; 
+  }
+  
+  .py-4 { 
+    padding-top: 1rem !important; 
+    padding-bottom: 1rem !important; 
+  }
+  
+  section {
+    padding: 1.5rem max(0.75rem, env(safe-area-inset-left)) 1.5rem max(0.75rem, env(safe-area-inset-right));
   }
 }
