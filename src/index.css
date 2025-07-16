@@ -6,6 +6,8 @@
 html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  width: 100%;
 }
 
 body {
@@ -13,6 +15,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 /* Hide scrollbars on mobile for cleaner look */
@@ -41,5 +55,74 @@ body {
     padding-right: max(0px, env(safe-area-inset-right));
     padding-top: max(0px, env(safe-area-inset-top));
     padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+}
+
+/* Mobile app full-screen styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Make navigation more mobile-friendly */
+  nav {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  /* Ensure content takes full width */
+  .max-w-7xl, .max-w-6xl, .max-w-4xl {
+    max-width: 100% !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Make images and content larger on mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Increase touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better mobile spacing */
+  .space-x-8 > * + * {
+    margin-left: 1rem;
+  }
+  
+  /* Full height sections */
+  section, div[class*="min-h-"] {
+    min-height: 100vh;
+  }
+  
+  /* Larger text on mobile */
+  h1 { font-size: 2rem !important; }
+  h2 { font-size: 1.75rem !important; }
+  h3 { font-size: 1.5rem !important; }
+  
+  /* Better button sizing */
+  .px-8 { padding-left: 2rem !important; padding-right: 2rem !important; }
+  .py-4 { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+  
+  /* Full width on mobile */
+  .w-full { width: 100% !important; }
+  
+  /* Better grid layout */
+  .grid { grid-template-columns: 1fr !important; }
+}
+
+/* PWA standalone mode styles */
+@media (display-mode: standalone) {
+  body {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  nav {
+    padding-top: env(safe-area-inset-top);
   }
 }
