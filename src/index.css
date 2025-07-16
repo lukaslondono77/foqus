@@ -86,6 +86,13 @@ nav {
   border-bottom: 1px solid #334155;
 }
 
+/* Mobile menu styling */
+.mobile-menu {
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
 /* Full width containers */
 .max-w-7xl, .max-w-6xl, .max-w-4xl {
   max-width: 100% !important;
@@ -118,8 +125,31 @@ button:active, a:active, [role="button"]:active {
 }
 
 /* Smooth scrolling for all elements */
-* {
+html {
   scroll-behavior: smooth;
+}
+
+/* Mobile menu animations */
+.mobile-menu-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.mobile-menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms, transform 200ms;
+}
+
+.mobile-menu-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 200ms, transform 200ms;
 }
 
 /* Typography for mobile */

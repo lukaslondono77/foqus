@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Download, MessageCircle } from 'lucide-react';
+import { Download, MessageCircle, Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Home from './components/Home';
 import Plans from './components/Plans';
@@ -13,6 +13,7 @@ import { getImagePath } from './utils/paths';
 function App() {
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const [isInstallable, setIsInstallable] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handler = (e: any) => {
@@ -50,18 +51,28 @@ function App() {
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <Router>
       <nav className="bg-slate-900 text-white shadow-lg sticky top-0 z-50 w-full">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between h-16">
-            <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+            <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity" onClick={closeMobileMenu}>
               <img 
                 src={getImagePath('foqusverde.jpg')}
                 alt="FOQUS" 
                 className="h-8 w-auto"
               />
             </Link>
+            
+            {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8 items-center">
               <Link to="/" className="hover:text-green-400 transition-colors">Inicio</Link>
               <Link to="/plans" className="hover:text-green-400 transition-colors">Planes</Link>
@@ -80,16 +91,78 @@ function App() {
                 </button>
               )}
             </div>
+            
             {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button className="text-white hover:text-green-400">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
+            <button
+              onClick={toggleMobileMenu}
+              className="md:hidden text-white hover:text-green-400 focus:outline-none"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-slate-800 border-t border-slate-700"
+          >
+            <div className="px-6 py-4 space-y-4">
+              <Link 
+                to="/" 
+                className="block text-white hover:text-green-400 transition-colors py-2"
+                onClick={closeMobileMenu}
+              >
+                Inicio
+              </Link>
+              <Link 
+                to="/plans" 
+                className="block text-white hover:text-green-400 transition-colors py-2"
+                onClick={closeMobileMenu}
+              >
+                Planes
+              </Link>
+              <Link 
+                to="/gallery" 
+                className="block text-white hover:text-green-400 transition-colors py-2"
+                onClick={closeMobileMenu}
+              >
+                Galería
+              </Link>
+              <Link 
+                to="/contact" 
+                className="block text-white hover:text-green-400 transition-colors py-2"
+                onClick={closeMobileMenu}
+              >
+                Contacto
+              </Link>
+              <Link 
+                to="/about" 
+                className="block text-white hover:text-green-400 transition-colors py-2"
+                onClick={closeMobileMenu}
+              >
+                Sobre Nosotros
+              </Link>
+              
+              {/* Mobile Install Button */}
+              {isInstallable && (
+                <button
+                  onClick={() => {
+                    handleInstallClick();
+                    closeMobileMenu();
+                  }}
+                  className="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors"
+                >
+                  <Download size={16} />
+                  Instalar App
+                </button>
+              )}
+            </div>
+          </motion.div>
+        )}
       </nav>
       
       <Routes>
