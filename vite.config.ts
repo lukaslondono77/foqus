@@ -24,6 +24,7 @@ export default defineConfig({
         orientation: 'portrait',
         categories: ['fitness', 'health', 'lifestyle'],
         lang: 'es',
+        prefer_related_applications: false,
         icons: [
           {
             src: '/icon-192x192.png',
@@ -38,6 +39,14 @@ export default defineConfig({
             purpose: 'any maskable'
           },
         ],
+        screenshots: [
+          {
+            src: '/images/foqusverde.jpg',
+            sizes: '1280x720',
+            type: 'image/jpeg',
+            form_factor: 'wide'
+          }
+        ]
       },
       devOptions: {
         enabled: true,
