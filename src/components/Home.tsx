@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Users, Target, Zap } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { getImagePath } from '../utils/paths';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ export default function Home() {
           >
             <div className="mb-8">
               <img 
-                src="/images/foqusverde.jpg" 
+                src={getImagePath('foqusverde.jpg')}
                 alt="FOQUS Logo" 
                 className="h-24 md:h-32 mx-auto mb-6"
               />

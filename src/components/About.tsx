@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Heart, Target, Users, Award, Star } from 'lucide-react';
+import { getImagePath } from '../utils/paths';
 
 export default function About() {
   return (
@@ -116,7 +117,7 @@ export default function About() {
             </div>
             <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 text-center">
               <img 
-                src="/images/mascotgym.jpg" 
+                src={getImagePath('mascotgym.jpg')}
                 alt="French Bulldog Mascot" 
                 className="w-48 h-48 object-cover rounded-full mx-auto mb-6"
               />

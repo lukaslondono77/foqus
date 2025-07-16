@@ -1,47 +1,48 @@
 import { motion } from 'framer-motion';
 import { Camera, MapPin, Clock } from 'lucide-react';
+import { getImagePath } from '../utils/paths';
 
 const galleryImages = [
   {
     id: 1,
     title: 'Logo Foqus - Versión Verde',
     description: 'Nuestro logo principal en verde neón sobre fondo negro',
-    image: '/images/foqusverde.jpg',
+    image: getImagePath('foqusverde.jpg'),
     category: 'brand'
   },
   {
     id: 2,
     title: 'Logo Foqus - Versión Blanco',
     description: 'Nuestro logo en versión clara sobre fondo blanco',
-    image: '/images/foqusblanco.jpg',
+    image: getImagePath('foqusblanco.jpg'),
     category: 'brand'
   },
   {
     id: 3,
     title: 'Área de Entrenamiento Principal',
     description: 'Espacio equipado con racks de potencia y equipos de fuerza',
-    image: '/images/gym1.jpg',
+    image: getImagePath('gym1.jpg'),
     category: 'equipment'
   },
   {
     id: 4,
     title: 'Zona de Entrenamiento Funcional',
     description: 'Área con césped artificial para ejercicios específicos',
-    image: '/images/gym2.jpg',
+    image: getImagePath('gym2.jpg'),
     category: 'functional'
   },
   {
     id: 5,
     title: 'Área de Entrenamiento Superior',
     description: 'Área elevada con equipos especializados y vista natural',
-    image: '/images/gym3.jpg',
+    image: getImagePath('gym3.jpg'),
     category: 'upper'
   },
   {
     id: 6,
     title: 'Nuestra Mascota',
     description: 'Nuestro querido French Bulldog, parte de la familia Foqus',
-    image: '/images/mascotgym.jpg',
+    image: getImagePath('mascotgym.jpg'),
     category: 'mascot'
   }
 ];

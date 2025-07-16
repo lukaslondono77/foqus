@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:prod": "NODE_ENV=production vite build",
+    "deploy": "npm run build:prod && echo 'Build completed for GitHub Pages deployment'",
     "lint": "eslint .",
     "preview": "vite preview"
   },

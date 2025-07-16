@@ -7,6 +7,7 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Install from './components/Install';
 import About from './components/About';
+import { getImagePath } from './utils/paths';
 
 function App() {
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
@@ -49,7 +50,7 @@ function App() {
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
               <img 
-                src="/images/foqusverde.jpg" 
+                src={getImagePath('foqusverde.jpg')}
                 alt="FOQUS" 
                 className="h-8 w-auto"
               />
