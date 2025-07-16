@@ -28,7 +28,7 @@ export default function Home() {
                 className="h-24 md:h-32 mx-auto mb-6"
               />
             </div>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-green-300">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-foqus-green-300">
               Entrenamiento Semipersonalizado
             </h2>
             <p className="text-xl md:text-2xl mb-12 leading-relaxed">
@@ -38,7 +38,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleViewPlans}
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 mx-auto"
+              className="bg-foqus-green-500 hover:bg-foqus-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 mx-auto"
             >
               Ver Planes
               <ArrowRight size={20} />

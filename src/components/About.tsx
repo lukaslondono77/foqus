@@ -45,10 +45,10 @@ export default function About() {
                 y garantizar resultados reales y duraderos.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-8 text-white text-center">
+            <div className="bg-gradient-to-br from-foqus-green-500 to-foqus-green-600 rounded-2xl p-8 text-white text-center">
               <Target className="w-16 h-16 mx-auto mb-6" />
               <h3 className="text-2xl font-bold mb-4">Enfócate en Ti</h3>
-              <p className="text-green-100">
+              <p className="text-foqus-green-100">
                 Nuestro lema refleja nuestra filosofía: cada persona tiene un proceso único 
                 y merece atención personalizada para alcanzar sus objetivos.
               </p>
@@ -68,21 +68,21 @@ export default function About() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-              <Heart className="w-12 h-12 text-green-500 mx-auto mb-4" />
+              <Heart className="w-12 h-12 text-foqus-green-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Pasión</h3>
               <p className="text-slate-600">
                 Amamos lo que hacemos y esa pasión se refleja en cada sesión de entrenamiento.
               </p>
             </div>
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-              <Users className="w-12 h-12 text-green-500 mx-auto mb-4" />
+              <Users className="w-12 h-12 text-foqus-green-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Comunidad</h3>
               <p className="text-slate-600">
                 Creemos en el poder de entrenar juntos, apoyándonos mutuamente.
               </p>
             </div>
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-              <Award className="w-12 h-12 text-green-500 mx-auto mb-4" />
+              <Award className="w-12 h-12 text-foqus-green-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Excelencia</h3>
               <p className="text-slate-600">
                 Nos esforzamos por la excelencia en cada aspecto de nuestro servicio.
@@ -96,19 +96,19 @@ export default function About() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-8 md:p-12 mb-16 text-white"
+          className="bg-gradient-to-r from-foqus-green-500 to-foqus-green-600 rounded-2xl p-8 md:p-12 mb-16 text-white"
         >
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6">
                 Nuestra Mascota
               </h2>
-              <p className="text-lg text-green-100 leading-relaxed mb-6">
+              <p className="text-lg text-foqus-green-100 leading-relaxed mb-6">
                 Te presentamos a nuestro querido French Bulldog, la mascota oficial de Foqus. 
                 Con su energía contagiosa y su espíritu juguetón, representa perfectamente 
                 la alegría y la determinación que caracterizan nuestro gimnasio.
               </p>
-              <p className="text-lg text-green-100 leading-relaxed">
+              <p className="text-lg text-foqus-green-100 leading-relaxed">
                 Siempre presente en nuestras sesiones, nuestra mascota no solo nos acompaña 
                 en el entrenamiento, sino que también nos recuerda la importancia de mantener 
                 un equilibrio entre la disciplina y la diversión en nuestro camino hacia 
@@ -122,7 +122,7 @@ export default function About() {
                 className="w-48 h-48 object-cover rounded-full mx-auto mb-6"
               />
               <h3 className="text-2xl font-bold mb-4">Danger</h3>
-              <p className="text-green-100">
+              <p className="text-foqus-green-100">
                 Nuestro compañero fiel que nos inspira a ser mejores cada día
               </p>
             </div>
@@ -141,7 +141,7 @@ export default function About() {
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="text-center">
-              <div className="w-32 h-32 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-32 h-32 bg-gradient-to-br from-foqus-green-500 to-foqus-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-16 h-16 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Entrenadores Certificados</h3>
@@ -152,7 +152,7 @@ export default function About() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-32 h-32 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-32 h-32 bg-gradient-to-br from-foqus-green-500 to-foqus-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Star className="w-16 h-16 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Atención Personalizada</h3>
@@ -211,7 +211,7 @@ export default function About() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold"
+              className="bg-foqus-green-500 hover:bg-foqus-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold"
             >
               Comenzar Ahora
             </motion.button>

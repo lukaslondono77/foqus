@@ -74,17 +74,17 @@ function App() {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8 items-center">
-              <Link to="/" className="hover:text-green-400 transition-colors">Inicio</Link>
-              <Link to="/plans" className="hover:text-green-400 transition-colors">Planes</Link>
-              <Link to="/gallery" className="hover:text-green-400 transition-colors">Galería</Link>
-              <Link to="/contact" className="hover:text-green-400 transition-colors">Contacto</Link>
-              <Link to="/about" className="hover:text-green-400 transition-colors">Sobre Nosotros</Link>
+              <Link to="/" className="hover:text-foqus-green-400 transition-colors">Inicio</Link>
+              <Link to="/plans" className="hover:text-foqus-green-400 transition-colors">Planes</Link>
+              <Link to="/gallery" className="hover:text-foqus-green-400 transition-colors">Galería</Link>
+              <Link to="/contact" className="hover:text-foqus-green-400 transition-colors">Contacto</Link>
+              <Link to="/about" className="hover:text-foqus-green-400 transition-colors">Sobre Nosotros</Link>
               
               {/* Install Button */}
               {isInstallable && (
                 <button
                   onClick={handleInstallClick}
-                  className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition-colors"
+                  className="bg-foqus-green-500 hover:bg-foqus-green-600 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition-colors"
                 >
                   <Download size={16} />
                   Instalar App
@@ -95,7 +95,7 @@ function App() {
             {/* Mobile menu button */}
             <button
               onClick={toggleMobileMenu}
-              className="md:hidden text-white hover:text-green-400 focus:outline-none"
+              className="md:hidden text-white hover:text-foqus-green-400 focus:outline-none"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -113,35 +113,35 @@ function App() {
             <div className="px-6 py-4 space-y-4">
               <Link 
                 to="/" 
-                className="block text-white hover:text-green-400 transition-colors py-2"
+                className="block text-white hover:text-foqus-green-400 transition-colors py-2"
                 onClick={closeMobileMenu}
               >
                 Inicio
               </Link>
               <Link 
                 to="/plans" 
-                className="block text-white hover:text-green-400 transition-colors py-2"
+                className="block text-white hover:text-foqus-green-400 transition-colors py-2"
                 onClick={closeMobileMenu}
               >
                 Planes
               </Link>
               <Link 
                 to="/gallery" 
-                className="block text-white hover:text-green-400 transition-colors py-2"
+                className="block text-white hover:text-foqus-green-400 transition-colors py-2"
                 onClick={closeMobileMenu}
               >
                 Galería
               </Link>
               <Link 
                 to="/contact" 
-                className="block text-white hover:text-green-400 transition-colors py-2"
+                className="block text-white hover:text-foqus-green-400 transition-colors py-2"
                 onClick={closeMobileMenu}
               >
                 Contacto
               </Link>
               <Link 
                 to="/about" 
-                className="block text-white hover:text-green-400 transition-colors py-2"
+                className="block text-white hover:text-foqus-green-400 transition-colors py-2"
                 onClick={closeMobileMenu}
               >
                 Sobre Nosotros
@@ -154,7 +154,7 @@ function App() {
                     handleInstallClick();
                     closeMobileMenu();
                   }}
-                  className="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors"
+                  className="w-full bg-foqus-green-500 hover:bg-foqus-green-600 text-white px-4 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors"
                 >
                   <Download size={16} />
                   Instalar App
@@ -182,7 +182,7 @@ function App() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={handleWhatsAppClick}
-        className="fixed bottom-6 right-6 w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg flex items-center justify-center z-50 transition-all duration-200 hover:shadow-xl"
+        className="fixed bottom-6 right-6 w-16 h-16 bg-foqus-green-500 hover:bg-foqus-green-600 text-white rounded-full shadow-lg flex items-center justify-center z-50 transition-all duration-200 hover:shadow-xl"
         style={{
           paddingLeft: 'max(1rem, env(safe-area-inset-left))',
           paddingRight: 'max(1rem, env(safe-area-inset-right))',

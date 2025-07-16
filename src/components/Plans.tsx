@@ -86,10 +86,10 @@ export default function Plans() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
             >
-              <div className="bg-gradient-to-r from-green-500 to-green-600 p-6 text-white text-center">
+              <div className="bg-gradient-to-r from-foqus-green-500 to-foqus-green-600 p-6 text-white text-center">
                 <plan.icon className="w-12 h-12 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <p className="text-green-100">{plan.description}</p>
+                <p className="text-foqus-green-100">{plan.description}</p>
               </div>
               
               <div className="p-6">
@@ -97,7 +97,7 @@ export default function Plans() {
                   {plan.prices.map((price, priceIndex) => (
                     <div key={priceIndex} className="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
                       <div className="flex items-center gap-2">
-                        <Check className="w-5 h-5 text-green-500" />
+                        <Check className="w-5 h-5 text-foqus-green-500" />
                         <span className="font-semibold text-slate-700">
                           {price.classes} {price.classes === 1 ? 'clase' : 'clases'}
                         </span>
@@ -113,7 +113,7 @@ export default function Plans() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => handleReservePlan(plan.name)}
-                  className="w-full mt-6 bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200"
+                  className="w-full mt-6 bg-foqus-green-500 hover:bg-foqus-green-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200"
                 >
                   Reservar Plan
                 </motion.button>
@@ -135,21 +135,21 @@ export default function Plans() {
             </h3>
             <div className="grid md:grid-cols-3 gap-6 text-left">
               <div className="flex items-start gap-3">
-                <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                <Check className="w-6 h-6 text-foqus-green-500 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-slate-900 mb-1">Atención Personalizada</h4>
                   <p className="text-slate-600 text-sm">Máximo 4 personas por clase para un enfoque individual.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                <Check className="w-6 h-6 text-foqus-green-500 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-slate-900 mb-1">Flexibilidad</h4>
                   <p className="text-slate-600 text-sm">Elige el plan que mejor se adapte a tus necesidades.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Check className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                <Check className="w-6 h-6 text-foqus-green-500 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-slate-900 mb-1">Resultados Garantizados</h4>
                   <p className="text-slate-600 text-sm">Entrenamiento eficiente diseñado para lograr tus objetivos.</p>

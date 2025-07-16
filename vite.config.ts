@@ -16,7 +16,7 @@ export default defineConfig({
         name: 'Foqus Fitness',
         short_name: 'Foqus',
         description: 'Modern fitness app for Foqus - Entrenamiento semipersonalizado',
-        theme_color: '#22c55e',
+        theme_color: '#006400',
         background_color: '#1e293b',
         display: 'standalone',
         start_url: '/',

@@ -114,11 +114,11 @@ Enviado desde foqus.com`;
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="mt-6 bg-green-100 border border-green-300 rounded-lg p-4 inline-block"
+              className="mt-6 bg-foqus-green-100 border border-foqus-green-300 rounded-lg p-4 inline-block"
             >
-              <p className="text-green-800 font-semibold">
-                Plan seleccionado: <span className="text-green-600">{selectedPlan}</span>
-              </p>
+                              <p className="text-foqus-green-800 font-semibold">
+                  Plan seleccionado: <span className="text-foqus-green-600">{selectedPlan}</span>
+                </p>
             </motion.div>
           )}
         </motion.div>
@@ -138,11 +138,11 @@ Enviado desde foqus.com`;
                 className="absolute inset-0 bg-green-50 border-2 border-green-200 rounded-2xl flex items-center justify-center z-10"
               >
                 <div className="text-center">
-                  <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-green-800 mb-2">¡Mensaje Enviado!</h3>
-                  <p className="text-green-600">
-                    Tu mensaje se ha enviado por WhatsApp. Te contactaremos pronto.
-                  </p>
+                  <CheckCircle className="w-16 h-16 text-foqus-green-500 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-foqus-green-800 mb-2">¡Mensaje Enviado!</h3>
+                                  <p className="text-foqus-green-600">
+                  Tu mensaje se ha enviado por WhatsApp. Te contactaremos pronto.
+                </p>
                 </div>
               </motion.div>
             )}
@@ -266,16 +266,16 @@ Enviado desde foqus.com`;
             className="space-y-8"
           >
             {/* WhatsApp CTA */}
-            <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-r from-foqus-green-500 to-foqus-green-600 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">¿Prefieres WhatsApp Directo?</h3>
-              <p className="text-green-100 mb-6">
-                Responde más rápido y recibe atención inmediata a través de WhatsApp.
-              </p>
+                              <p className="text-foqus-green-100 mb-6">
+                  Responde más rápido y recibe atención inmediata a través de WhatsApp.
+                </p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={openWhatsApp}
-                className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold flex items-center gap-2"
+                                  className="bg-white text-foqus-green-600 px-6 py-3 rounded-lg font-semibold flex items-center gap-2"
               >
                 <MessageCircle size={20} />
                 Chatear por WhatsApp

@@ -97,13 +97,13 @@ export default function Install() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="bg-green-500 rounded-2xl p-8 text-white"
+                className="bg-foqus-green-500 rounded-2xl p-8 text-white"
               >
                 <CheckCircle className="w-16 h-16 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-4">
                   ¡Foqus ya está instalado!
                 </h3>
-                <p className="text-green-100">
+                <p className="text-foqus-green-100">
                   La aplicación ya está disponible en tu dispositivo.
                 </p>
               </motion.div>
@@ -111,20 +111,20 @@ export default function Install() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-8 text-white"
+                className="bg-gradient-to-r from-foqus-green-500 to-foqus-green-600 rounded-2xl p-8 text-white"
               >
                 <Download className="w-16 h-16 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-4">
                   ¡Instala Foqus Ahora!
                 </h3>
-                <p className="text-green-100 mb-6">
+                <p className="text-foqus-green-100 mb-6">
                   Tu navegador soporta la instalación. Haz clic en el botón para instalar Foqus en tu dispositivo.
                 </p>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleInstallClick}
-                  className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 mx-auto"
+                  className="bg-white text-foqus-green-600 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 mx-auto"
                 >
                   <Download size={20} />
                   Instalar Aplicación
@@ -170,7 +170,7 @@ export default function Install() {
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                 className="flex items-start gap-4 bg-white/5 backdrop-blur-sm rounded-xl p-6"
               >
-                <feature.icon className="w-8 h-8 text-green-400 mt-1 flex-shrink-0" />
+                <feature.icon className="w-8 h-8 text-foqus-green-400 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-white mb-2">{feature.title}</h4>
                   <p className="text-slate-300 text-sm">{feature.description}</p>
@@ -192,7 +192,7 @@ export default function Install() {
           </h3>
           <div className="grid md:grid-cols-3 gap-6 text-left">
             <div className="flex items-start gap-4">
-              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">
+              <div className="w-8 h-8 bg-foqus-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">
                 1
               </div>
               <div>
@@ -202,7 +202,7 @@ export default function Install() {
             </div>
             
             <div className="flex items-start gap-4">
-              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">
+              <div className="w-8 h-8 bg-foqus-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">
                 2
               </div>
               <div>
@@ -215,7 +215,7 @@ export default function Install() {
             </div>
             
             <div className="flex items-start gap-4">
-              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">
+              <div className="w-8 h-8 bg-foqus-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">
                 3
               </div>
               <div>
