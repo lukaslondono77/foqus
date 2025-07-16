@@ -307,9 +307,8 @@ Enviado desde foqus.com`;
                   <div>
                     <h4 className="font-semibold text-slate-900">Dirección</h4>
                     <p className="text-slate-600">
-                      Calle 123 #45-67<br />
-                      Barrio, Ciudad<br />
-                      Colombia
+                      Cra 83c #33-25 (Segundo piso)<br />
+                      Medellín, Colombia
                     </p>
                   </div>
                 </div>
@@ -332,28 +331,34 @@ Enviado desde foqus.com`;
             <div className="bg-white rounded-2xl shadow-xl p-8">
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Síguenos</h3>
               <div className="flex gap-4">
+                <motion.a
+                  href="https://www.instagram.com/foqus.com.co/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full flex items-center justify-center hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  <span className="font-bold text-sm">IG</span>
+                </motion.a>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
+                  className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
                 >
-                  <span className="font-bold">IG</span>
+                  <span className="font-bold text-sm">FB</span>
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
+                  className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors shadow-lg hover:shadow-xl"
                 >
-                  <span className="font-bold">FB</span>
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
-                >
-                  <span className="font-bold">TT</span>
+                  <span className="font-bold text-sm">TT</span>
                 </motion.button>
               </div>
+              <p className="text-sm text-slate-500 mt-4">
+                ¡Síguenos en Instagram para ver nuestros entrenamientos y resultados!
+              </p>
             </div>
           </motion.div>
         </div>

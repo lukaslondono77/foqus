@@ -165,11 +165,39 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* Call to Action */}
+        {/* Social Media Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">
+              Síguenos en Instagram
+            </h3>
+            <p className="text-slate-600 mb-6">
+              Descubre nuestros entrenamientos, resultados y la comunidad Foqus
+            </p>
+            <motion.a
+              href="https://www.instagram.com/foqus.com.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl"
+            >
+              <span className="text-xl">📸</span>
+              @foqus.com.co
+            </motion.a>
+          </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 text-white">
