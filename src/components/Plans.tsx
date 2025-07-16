@@ -53,18 +53,10 @@ export default function Plans() {
   const navigate = useNavigate();
 
   const handleReservePlan = (planName: string) => {
-    // Option 1: Navigate to contact page
-    navigate('/contact', { 
-      state: { 
-        selectedPlan: planName,
-        message: `Me interesa reservar el ${planName}. ¿Podrían darme más información?`
-      }
-    });
-    
-    // Option 2: Open WhatsApp (uncomment if you prefer this)
-    // const phone = '+573142073792'; // User's number for testing
-    // const message = `Hola, me interesa reservar el ${planName}. ¿Podrían darme más información?`;
-    // window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+    // Open WhatsApp directly with plan information
+    const phone = '573155219206';
+    const message = `Hola, me interesa reservar el ${planName}. ¿Podrían darme más información sobre precios y horarios disponibles?`;
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (

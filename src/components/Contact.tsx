@@ -51,7 +51,7 @@ export default function Contact() {
     // Simulate processing time
     setTimeout(() => {
       // Create WhatsApp message with form data
-      const phone = '+573142073792'; // User's number for testing
+      const phone = '573155219206'; // WhatsApp number (without +)
       const whatsappMessage = `*Nuevo mensaje desde Foqus Fitness*
 
 *Nombre:* ${formData.name}
@@ -88,7 +88,7 @@ Enviado desde foqus.com`;
   };
 
   const openWhatsApp = () => {
-    const phone = '+573142073792'; // User's number for testing
+    const phone = '573155219206'; // WhatsApp number (without +)
     const whatsappMessage = selectedPlan 
       ? `Hola, me interesa reservar el ${selectedPlan}. ¿Podrían darme más información?`
       : 'Hola, me interesa conocer más sobre los planes de Foqus.';
@@ -290,7 +290,7 @@ Enviado desde foqus.com`;
                   <Phone className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-slate-900">Teléfono</h4>
-                    <p className="text-slate-600">+57 314 207 3792</p>
+                    <p className="text-slate-600">+57 315 521 9206</p>
                   </div>
                 </div>
                 

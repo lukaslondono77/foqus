@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Download } from 'lucide-react';
+import { Download, MessageCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Home from './components/Home';
 import Plans from './components/Plans';
 import Gallery from './components/Gallery';
@@ -41,6 +42,12 @@ function App() {
     
     setDeferredPrompt(null);
     setIsInstallable(false);
+  };
+
+  const handleWhatsAppClick = () => {
+    const phone = '573155219206';
+    const message = 'Hola, me interesa conocer más sobre Foqus Fitness.';
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
@@ -93,6 +100,24 @@ function App() {
         <Route path="/install" element={<Install />} />
         <Route path="/about" element={<About />} />
       </Routes>
+
+      {/* Floating WhatsApp Button */}
+      <motion.button
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 1, type: "spring", stiffness: 260, damping: 20 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={handleWhatsAppClick}
+        className="fixed bottom-6 right-6 w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg flex items-center justify-center z-50 transition-all duration-200 hover:shadow-xl"
+        style={{
+          paddingLeft: 'max(1rem, env(safe-area-inset-left))',
+          paddingRight: 'max(1rem, env(safe-area-inset-right))',
+          bottom: 'max(1.5rem, env(safe-area-inset-bottom))'
+        }}
+      >
+        <MessageCircle size={24} />
+      </motion.button>
     </Router>
   );
 }
