@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/foqus/' : '/',
+  base: '/',
   plugins: [
     react(),
     VitePWA({
@@ -19,20 +19,20 @@ export default defineConfig({
         theme_color: '#22c55e',
         background_color: '#ffffff',
         display: 'standalone',
-        start_url: process.env.NODE_ENV === 'production' ? '/foqus/' : '/',
-        scope: process.env.NODE_ENV === 'production' ? '/foqus/' : '/',
+        start_url: '/',
+        scope: '/',
         orientation: 'portrait',
         categories: ['fitness', 'health', 'lifestyle'],
         lang: 'es',
         icons: [
           {
-            src: process.env.NODE_ENV === 'production' ? '/foqus/icon-192x192.png' : '/icon-192x192.png',
+            src: '/icon-192x192.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any maskable'
           },
           {
-            src: process.env.NODE_ENV === 'production' ? '/foqus/icon-512x512.png' : '/icon-512x512.png',
+            src: '/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable'
