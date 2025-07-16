@@ -174,6 +174,25 @@ function App() {
         <Route path="/about" element={<About />} />
       </Routes>
 
+      {/* Footer */}
+      <footer className="bg-slate-900 text-slate-400 py-8 mt-20">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex items-center space-x-2">
+              <img 
+                src={getImagePath('foqusverde.jpg')}
+                alt="FOQUS" 
+                className="h-6 w-auto opacity-80"
+              />
+              <span className="text-sm">Fitness & Wellness</span>
+            </div>
+            <div className="text-xs text-slate-500">
+              © 2025 CloudIgnite. All rights reserved. Unauthorized reproduction or distribution is prohibited.
+            </div>
+          </div>
+        </div>
+      </footer>
+
       {/* Floating WhatsApp Button */}
       <motion.button
         initial={{ scale: 0, opacity: 0 }}
