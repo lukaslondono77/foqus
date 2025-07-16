@@ -1,7 +1,6 @@
 // Utility function to get the correct base path for assets
 export const getAssetPath = (path: string): string => {
-  const base = import.meta.env.PROD ? '/foqus' : '';
-  return `${base}${path}`;
+  return path;
 };
 
 // Helper function for image paths
